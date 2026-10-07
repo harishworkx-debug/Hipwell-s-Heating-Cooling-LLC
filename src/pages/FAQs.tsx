@@ -77,7 +77,7 @@ export default function FAQs() {
                       ))}
                     </div>
                     <Link
-                      to={`/services/${service.slug}`}
+                      to={`/${service.slug}`}
                       className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-warm-600 hover:text-warm-700 transition-colors"
                     >
                       Learn more about {service.title}

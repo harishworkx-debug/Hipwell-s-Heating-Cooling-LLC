@@ -9,7 +9,7 @@ export const businessInfo = {
   hours: 'Mon–Fri: 8:00 AM – 5:00 PM',
   mapsLink: 'https://maps.app.goo.gl/LerfEuDyFKKyzb596',
   mapsEmbed:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.0!2d-112.0339!3d43.4666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0x0!2zM43DCnQyNyc1OS42Ik4KMTEywrcwMicwMS40Ilc!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5740229.120452752!2d-119.4365578791541!3d45.37209752462881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5354097e60a07751%3A0xe26ec6f11e7bb174!2sHipwell's%20Heating%20%26%20Cooling%20LLC!5e0!3m2!1sen!2sin!4v1791368023464!5m2!1sen!2sin",
   tagline: 'Heating & Cooling Solutions for Year-Round Comfort',
   description:
     "Hipwell's Heating & Cooling LLC is a repair-focused HVAC company serving Idaho Falls and the surrounding eastern Idaho community. With over 28 years of hands-on experience, we specialize in diagnosing and fixing the heating and cooling problems other companies can't.",
@@ -17,7 +17,7 @@ export const businessInfo = {
 
 export const services = [
   {
-    slug: 'air-conditioning-repair',
+    slug: 'air-conditioning-repair-idaho-falls',
     title: 'Air Conditioning Repair',
     short: 'Fast, thorough AC diagnostics and repairs to restore your comfort.',
     icon: 'Snowflake',
@@ -58,7 +58,7 @@ export const services = [
     ],
   },
   {
-    slug: 'air-conditioning-installation',
+    slug: 'air-conditioning-installation-idaho-falls',
     title: 'AC Installation and Replacement',
     short: 'Honest guidance on when to repair versus replace your cooling system.',
     icon: 'Fan',
@@ -97,7 +97,7 @@ export const services = [
     ],
   },
   {
-    slug: 'ac-maintenance',
+    slug: 'ac-maintenance-idaho-falls',
     title: 'Air Conditioning Maintenance',
     short: 'Keep your cooling system running efficiently with seasonal tune-ups.',
     icon: 'Wrench',
@@ -135,7 +135,7 @@ export const services = [
     ],
   },
   {
-    slug: 'heating-repair',
+    slug: 'heating-repair-idaho-falls',
     title: 'Heating System Repair',
     short: 'Dependable heating repairs for Idaho Falls winters.',
     icon: 'Flame',
@@ -175,7 +175,7 @@ export const services = [
     ],
   },
   {
-    slug: 'heating-installation',
+    slug: 'heating-installation-idaho-falls',
     title: 'Heating Installation and Replacement',
     short: 'Expert evaluation and installation of new heating systems.',
     icon: 'Home',
@@ -214,7 +214,7 @@ export const services = [
     ],
   },
   {
-    slug: 'furnace-troubleshooting',
+    slug: 'furnace-troubleshooting-idaho-falls',
     title: 'Furnace Troubleshooting and Repair',
     short: 'Find the real cause of furnace problems — not just the symptoms.',
     icon: 'Settings',
@@ -254,7 +254,7 @@ export const services = [
     ],
   },
   {
-    slug: 'heat-pump-services',
+    slug: 'heat-pump-services-idaho-falls',
     title: 'Heat Pump Services',
     short: 'Diagnosis and repair of heat pump heating and cooling issues.',
     icon: 'RefreshCw',
@@ -294,7 +294,7 @@ export const services = [
     ],
   },
   {
-    slug: 'hvac-diagnostics',
+    slug: 'hvac-diagnostics-idaho-falls',
     title: 'HVAC System Diagnostics',
     short: 'Comprehensive system evaluation when something isn\u2019t right.',
     icon: 'Search',
@@ -333,7 +333,7 @@ export const services = [
     ],
   },
   {
-    slug: 'thermostat-services',
+    slug: 'thermostat-services-idaho-falls',
     title: 'Thermostat Troubleshooting and Installation',
     short: 'Solve comfort problems that start at the control panel.',
     icon: 'Thermometer',
@@ -373,7 +373,7 @@ export const services = [
     ],
   },
   {
-    slug: 'preventive-maintenance',
+    slug: 'preventive-maintenance-idaho-falls',
     title: 'Preventive HVAC Maintenance',
     short: 'Year-round tune-ups that prevent breakdowns and extend system life.',
     icon: 'ShieldCheck',
@@ -415,49 +415,49 @@ export const services = [
 
 export const serviceAreas = [
   {
-    slug: 'idaho-falls',
+    slug: 'ac-repair-idaho-falls',
     name: 'Idaho Falls',
     primaryService: 'HVAC Diagnostics',
     description:
       'As our home base, Idaho Falls is where Hipwell\u2019s Heating & Cooling provides complete HVAC diagnostic and repair services. From the Calkins Avenue shop, we serve homeowners throughout Idaho Falls — diagnosing heating and cooling problems, performing repairs, and helping residents make informed decisions about their HVAC systems.',
   },
   {
-    slug: 'rexburg',
+    slug: 'ac-repair-rexburg',
     name: 'Rexburg',
     primaryService: 'Heating Repair',
     description:
       'Rexburg\u2019s cold winters demand reliable heating. Hipwell\u2019s provides heating system repair and furnace troubleshooting services to Rexburg residents, with the same thorough diagnostic approach we\u2019re known for in Idaho Falls. If your furnace isn\u2019t keeping up with the cold, we can help identify and fix the problem.',
   },
   {
-    slug: 'ammon',
+    slug: 'ac-repair-ammon',
     name: 'Ammon',
     primaryService: 'AC Repair',
     description:
       'Ammon residents trust Hipwell\u2019s for air conditioning repair when summer heat puts demands on their cooling systems. We diagnose and repair AC issues — from weak airflow to short cycling to warm-air problems — with the attention to root-cause troubleshooting that sets us apart.',
   },
   {
-    slug: 'shelley',
+    slug: 'ac-repair-shelley',
     name: 'Shelley',
     primaryService: 'Furnace Troubleshooting',
     description:
       'In Shelley, Hipwell\u2019s provides furnace troubleshooting and heating repair services. When your furnace won\u2019t ignite, short-cycles, or doesn\u2019t warm your home evenly, our diagnostic-first approach identifies the actual cause — so the repair we make is the one that solves the problem.',
   },
   {
-    slug: 'blackfoot',
+    slug: 'ac-repair-blackfoot',
     name: 'Blackfoot',
     primaryService: 'Heat Pump Services',
     description:
       'Hipwell\u2019s serves Blackfoot homeowners with heat pump diagnosis and repair, along with general HVAC troubleshooting. Whether your heat pump isn\u2019t heating properly, freezes over in winter, or switches to auxiliary heat too often, we have the experience to find and fix the issue.',
   },
   {
-    slug: 'rigby',
+    slug: 'ac-repair-rigby',
     name: 'Rigby',
     primaryService: 'AC Maintenance',
     description:
       'For Rigby residents, Hipwell\u2019s provides air conditioning maintenance and repair services. Seasonal tune-ups keep your cooling system running efficiently through Idaho summers, while our repair services address the issues that come up when something goes wrong.',
   },
   {
-    slug: 'ucon',
+    slug: 'ac-repair-ucon',
     name: 'Ucon',
     primaryService: 'HVAC Diagnostics',
     description:
@@ -582,5 +582,44 @@ export const whyChooseUs = [
     description:
       'We work on both residential and light commercial HVAC systems, bringing the same thorough diagnostic approach to every job regardless of system size.',
     icon: 'Building2',
+  },
+];
+
+export const reviews = [
+  {
+    name: 'Dennis Horvath',
+    date: '6 years ago',
+    text: "Hottest days of the year! Last night the A/C froze up and would not come on. Called Hipwell's, talked to Brent at 8 AM today. He said, 'I can be there in an hour.' He was and quickly diagnosed the problems... This was never going to be a cheap repair but the price was very fair for all that was done. Thanks Hipwell's and Thanks Brent!",
+    rating: 5,
+  },
+  {
+    name: 'Marshall Hurst',
+    date: '2 years ago',
+    text: 'Outstanding Business! Same day service! Great repair on older AC system. Showed me how to extend the life of my AC and make it more efficient. Highly Recommended.',
+    rating: 5,
+  },
+  {
+    name: 'Chaila Oakey',
+    date: '5 years ago',
+    text: 'Hipwell was great. My furnace stopped in the middle of the night. He was out to fix it within two hours of me calling him. He got it working fast. Very satisfied.',
+    rating: 5,
+  },
+  {
+    name: 'TyLyn Lowry',
+    date: '7 years ago',
+    text: 'He came right away, diagnosed the problem within minutes, left to get the needed part, returned and had the furnace working in a very short time. Friendly and easy to work with.',
+    rating: 5,
+  },
+  {
+    name: 'Misty Dawn Davis',
+    date: '4 years ago',
+    text: 'Came out just a few hours after I called for service. He was very polite, professional, and very knowledgeable, highly recommend.',
+    rating: 5,
+  },
+  {
+    name: 'Randy Matthews',
+    date: '6 years ago',
+    text: "They really can fix what the others can't! For a dang good price every time.",
+    rating: 5,
   },
 ];

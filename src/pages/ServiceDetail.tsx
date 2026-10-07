@@ -29,7 +29,7 @@ export default function ServiceDetail() {
       <SEO
         title={`${service.title} | Hipwell's Heating & Cooling Idaho Falls`}
         description={service.short}
-        path={`/services/${service.slug}`}
+        path={`/${service.slug}`}
         image={service.image}
       />
       <JsonLd data={faqJsonLd} />
@@ -157,7 +157,7 @@ export default function ServiceDetail() {
                   {relatedServices.map((s) => (
                     <Link
                       key={s.slug}
-                      to={`/services/${s.slug}`}
+                      to={`/${s.slug}`}
                       className="flex items-center justify-between gap-2 text-sm font-medium text-navy-700 hover:text-warm-600 transition-colors group"
                     >
                       {s.title}

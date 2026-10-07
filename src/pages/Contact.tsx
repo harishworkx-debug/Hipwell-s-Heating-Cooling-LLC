@@ -3,7 +3,6 @@ import { Phone, MapPin, Clock, Mail, CheckCircle, AlertCircle, Send } from 'luci
 import SEO from '@/components/SEO';
 import PageHero from '@/components/PageHero';
 import { businessInfo, services } from '@/data/site-data';
-import { supabase } from '@/lib/supabase';
 
 type FormState = {
   name: string;
@@ -55,15 +54,8 @@ export default function Contact() {
 
     setStatus('submitting');
     try {
-      const { error } = await supabase.from('contact_submissions').insert({
-        name: form.name.trim(),
-        phone: form.phone.trim(),
-        email: form.email.trim(),
-        service_needed: form.service,
-        message: form.message.trim(),
-      });
-
-      if (error) throw error;
+      // Mock submission for static site
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       setStatus('success');
       setForm(initialForm);
@@ -150,7 +142,7 @@ export default function Contact() {
               <div className="rounded-2xl overflow-hidden shadow-lg h-[300px]">
                 <iframe
                   title="Hipwell's Heating & Cooling location map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.0!2d-112.0339!3d43.4666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535459c8a6e44f%3A0x0!2s2260%20Calkins%20Ave%2C%20Idaho%20Falls%2C%20ID%2083402!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5740229.120452752!2d-119.4365578791541!3d45.37209752462881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5354097e60a07751%3A0xe26ec6f11e7bb174!2sHipwell's%20Heating%20%26%20Cooling%20LLC!5e0!3m2!1sen!2sin!4v1791368023464!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

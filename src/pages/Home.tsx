@@ -22,6 +22,7 @@ import {
   ShieldCheck,
   Settings,
   Home as HomeIcon,
+  Star,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import JsonLd from '@/components/JsonLd';
@@ -34,6 +35,7 @@ import {
   whyChooseUs,
   homeFaqs,
   businessInfo,
+  reviews,
 } from '@/data/site-data';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -189,7 +191,7 @@ export default function Home() {
               return (
                 <Link
                   key={s.slug}
-                  to={`/services/${s.slug}`}
+                  to={`/${s.slug}`}
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy-900/5 hover:shadow-2xl hover:shadow-navy-900/10 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
@@ -261,10 +263,10 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/services/air-conditioning-repair" className="btn-primary">
+                <Link to="/air-conditioning-repair-idaho-falls" className="btn-primary">
                   Explore AC Repair <ChevronRight className="w-4 h-4" />
                 </Link>
-                <Link to="/services/ac-maintenance" className="btn-secondary">
+                <Link to="/ac-maintenance-idaho-falls" className="btn-secondary">
                   View AC Maintenance
                 </Link>
               </div>
@@ -326,10 +328,10 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/services/heating-repair" className="btn-primary">
+                <Link to="/heating-repair-idaho-falls" className="btn-primary">
                   View Heating Services <ChevronRight className="w-4 h-4" />
                 </Link>
-                <Link to="/services/furnace-troubleshooting" className="btn-secondary">
+                <Link to="/furnace-troubleshooting-idaho-falls" className="btn-secondary">
                   Furnace Troubleshooting
                 </Link>
               </div>
@@ -479,7 +481,7 @@ export default function Home() {
             {serviceAreas.map((area) => (
               <Link
                 key={area.slug}
-                to={`/service-areas/${area.slug}`}
+                to={`/${area.slug}`}
                 className="group flex items-center gap-3 p-4 rounded-xl bg-white hover:bg-warm-50 shadow-sm hover:shadow-md transition-all duration-300 border border-navy-100"
               >
                 <MapPin className="w-5 h-5 text-warm-500 flex-shrink-0" />
@@ -494,6 +496,38 @@ export default function Home() {
             <Link to="/service-areas" className="btn-secondary">
               View All Service Areas <ChevronRight className="w-4 h-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="section-padding bg-navy-50">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-navy-900 text-balance">
+              What Our Customers Say
+            </h2>
+            <p className="mt-4 text-lg text-navy-600">
+              Honest reviews from real customers in eastern Idaho.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {reviews.map((review, i) => (
+              <div key={i} className="p-8 rounded-2xl bg-white border border-navy-100 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+                <div className="flex text-warm-500 mb-4">
+                  {[...Array(review.rating)].map((_, j) => (
+                    <Star key={j} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <p className="text-navy-700 italic flex-grow mb-6 leading-relaxed">
+                  "{review.text}"
+                </p>
+                <div>
+                  <p className="font-bold text-navy-900">{review.name}</p>
+                  <p className="text-sm text-navy-500">{review.date}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -586,7 +620,7 @@ export default function Home() {
             <div className="rounded-2xl overflow-hidden shadow-2xl shadow-navy-900/20 h-[450px]">
               <iframe
                 title="Hipwell's Heating & Cooling location map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.0!2d-112.0339!3d43.4666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535459c8a6e44f%3A0x0!2s2260%20Calkins%20Ave%2C%20Idaho%20Falls%2C%20ID%2083402!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5740229.120452752!2d-119.4365578791541!3d45.37209752462881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5354097e60a07751%3A0xe26ec6f11e7bb174!2sHipwell's%20Heating%20%26%20Cooling%20LLC!5e0!3m2!1sen!2sin!4v1791368023464!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

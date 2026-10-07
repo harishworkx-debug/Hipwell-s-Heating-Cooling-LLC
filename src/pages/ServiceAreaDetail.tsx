@@ -21,7 +21,7 @@ export default function ServiceAreaDetail() {
       <SEO
         title={`HVAC Services in ${area.name}, ID | Hipwell's Heating & Cooling`}
         description={`Hipwell's Heating & Cooling provides ${area.primaryService.toLowerCase()} and other HVAC repair services in ${area.name}, Idaho. Call 208-552-7676 to schedule service.`}
-        path={`/service-areas/${area.slug}`}
+        path={`/${area.slug}`}
       />
 
       <PageHero
@@ -49,7 +49,7 @@ export default function ServiceAreaDetail() {
                   </h3>
                   <p className="text-navy-600 leading-relaxed mb-5">{relatedService.short}</p>
                   <Link
-                    to={`/services/${relatedService.slug}`}
+                    to={`/${relatedService.slug}`}
                     className="inline-flex items-center gap-2 font-semibold text-warm-600 hover:text-warm-700 transition-colors"
                   >
                     Learn about our {relatedService.title} services
@@ -115,7 +115,7 @@ export default function ServiceAreaDetail() {
                   {otherAreas.map((a) => (
                     <Link
                       key={a.slug}
-                      to={`/service-areas/${a.slug}`}
+                      to={`/${a.slug}`}
                       className="flex items-center justify-between gap-2 text-sm font-medium text-navy-700 hover:text-warm-600 transition-colors group"
                     >
                       {a.name}

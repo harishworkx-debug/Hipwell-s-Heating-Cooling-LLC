@@ -43,7 +43,7 @@ export default function ServiceAreasLanding() {
             {serviceAreas.map((area) => (
               <Link
                 key={area.slug}
-                to={`/service-areas/${area.slug}`}
+                to={`/${area.slug}`}
                 className="group p-8 rounded-2xl bg-navy-50 hover:bg-white hover:shadow-xl hover:shadow-navy-900/10 transition-all duration-300 border border-navy-100"
               >
                 <div className="flex items-center gap-3 mb-4">

@@ -46,7 +46,7 @@ export default function ServicesLanding() {
               return (
                 <Link
                   key={s.slug}
-                  to={`/services/${s.slug}`}
+                  to={`/${s.slug}`}
                   className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy-900/5 hover:shadow-2xl hover:shadow-navy-900/10 transition-all duration-300 hover:-translate-y-1 border border-navy-100"
                 >
                   <div className="aspect-[16/10] overflow-hidden relative">

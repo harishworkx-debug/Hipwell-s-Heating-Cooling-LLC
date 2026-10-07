@@ -84,7 +84,7 @@ export default function Header() {
                       {services.map((s) => (
                         <Link
                           key={s.slug}
-                          to={`/services/${s.slug}`}
+                          to={`/${s.slug}`}
                           className="block px-5 py-2.5 text-sm text-navy-700 hover:text-warm-600 hover:bg-warm-50 transition-colors"
                         >
                           {s.title}
@@ -119,7 +119,7 @@ export default function Header() {
                       {serviceAreas.map((a) => (
                         <Link
                           key={a.slug}
-                          to={`/service-areas/${a.slug}`}
+                          to={`/${a.slug}`}
                           className="block px-5 py-2.5 text-sm text-navy-700 hover:text-warm-600 hover:bg-warm-50 transition-colors"
                         >
                           {a.name}
@@ -186,7 +186,7 @@ export default function Header() {
                   {services.map((s) => (
                     <Link
                       key={s.slug}
-                      to={`/services/${s.slug}`}
+                      to={`/${s.slug}`}
                       className="block py-2 text-sm text-navy-600 hover:text-warm-600"
                     >
                       {s.title}
@@ -212,7 +212,7 @@ export default function Header() {
                   {serviceAreas.map((a) => (
                     <Link
                       key={a.slug}
-                      to={`/service-areas/${a.slug}`}
+                      to={`/${a.slug}`}
                       className="block py-2 text-sm text-navy-600 hover:text-warm-600"
                     >
                       {a.name}

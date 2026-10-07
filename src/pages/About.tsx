@@ -3,7 +3,7 @@ import { Phone, Wrench, Search, MessageSquare, Award, Building2, Heart, ChevronR
 import SEO from '@/components/SEO';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
-import { businessInfo } from '@/data/site-data';
+import { businessInfo, serviceAreas } from '@/data/site-data';
 
 export default function About() {
   const heroImage =
@@ -166,14 +166,14 @@ export default function About() {
                 Based in Idaho Falls, we serve homeowners throughout the eastern Idaho community:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {['Idaho Falls', 'Rexburg', 'Ammon', 'Shelley', 'Blackfoot', 'Rigby', 'Ucon'].map((city) => (
+                {serviceAreas.map((area) => (
                   <Link
-                    key={city}
-                    to={`/service-areas/${city.toLowerCase().replace(/\s+/g, '-')}`}
+                    key={area.slug}
+                    to={`/${area.slug}`}
                     className="flex items-center gap-2 p-3 rounded-lg bg-navy-50 hover:bg-warm-50 transition-colors"
                   >
                     <MapPin className="w-4 h-4 text-warm-500" />
-                    <span className="text-sm text-navy-700 font-medium">{city}</span>
+                    <span className="text-sm text-navy-700 font-medium">{area.name}</span>
                   </Link>
                 ))}
               </div>

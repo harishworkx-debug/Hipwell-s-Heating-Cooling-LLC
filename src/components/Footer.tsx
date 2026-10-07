@@ -50,7 +50,7 @@ export default function Footer() {
               {services.slice(0, 6).map((s) => (
                 <li key={s.slug}>
                   <Link
-                    to={`/services/${s.slug}`}
+                    to={`/${s.slug}`}
                     className="text-sm text-navy-200 hover:text-warm-400 transition-colors"
                   >
                     {s.title}
@@ -75,7 +75,7 @@ export default function Footer() {
               {serviceAreas.slice(0, 5).map((a) => (
                 <li key={a.slug}>
                   <Link
-                    to={`/service-areas/${a.slug}`}
+                    to={`/${a.slug}`}
                     className="text-sm text-navy-200 hover:text-warm-400 transition-colors"
                   >
                     {a.name}
