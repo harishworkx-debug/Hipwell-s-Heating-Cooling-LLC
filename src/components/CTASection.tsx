@@ -22,8 +22,8 @@ export default function CTASection({
         </h2>
         <p className="mt-5 text-lg text-navy-100 max-w-2xl mx-auto leading-relaxed">{description}</p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:2085527676" className="btn-primary">
-            <Phone className="w-5 h-5" /> Call 208-552-7676
+          <a href="tel:12088448165" className="btn-primary">
+            <Phone className="w-5 h-5" /> Call 208-844-8165
           </a>
           <Link to="/contact" className="btn-outline">
             Send a Message <ChevronRight className="w-4 h-4" />

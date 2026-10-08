@@ -20,7 +20,7 @@ export default function ServiceAreaDetail() {
     <>
       <SEO
         title={`HVAC Services in ${area.name}, ID | Hipwell's Heating & Cooling`}
-        description={`Hipwell's Heating & Cooling provides ${area.primaryService.toLowerCase()} and other HVAC repair services in ${area.name}, Idaho. Call 208-552-7676 to schedule service.`}
+        description={`Hipwell's Heating & Cooling provides ${area.primaryService.toLowerCase()} and other HVAC repair services in ${area.name}, Idaho. Call 208-844-8165 to schedule service.`}
         path={`/${area.slug}`}
       />
 
@@ -85,7 +85,7 @@ export default function ServiceAreaDetail() {
                   Need HVAC Repair in {area.name}?
                 </h3>
                 <p className="text-navy-200 mb-5">Call us today — we'll help you get your system running right.</p>
-                <a href="tel:2085527676" className="btn-primary">
+                <a href="tel:12088448165" className="btn-primary">
                   <Phone className="w-5 h-5" /> Call {businessInfo.phone}
                 </a>
               </div>
@@ -98,7 +98,7 @@ export default function ServiceAreaDetail() {
                 <p className="text-navy-200 text-sm mb-6">
                   Based in Idaho Falls, serving {area.name} and the surrounding community.
                 </p>
-                <a href="tel:2085527676" className="btn-primary w-full">
+                <a href="tel:12088448165" className="btn-primary w-full">
                   <Phone className="w-5 h-5" /> {businessInfo.phone}
                 </a>
                 <div className="mt-6 pt-6 border-t border-navy-700 space-y-3">

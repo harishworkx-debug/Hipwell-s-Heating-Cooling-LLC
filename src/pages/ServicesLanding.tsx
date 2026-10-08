@@ -16,12 +16,12 @@ export default function ServicesLanding() {
   return (
     <>
       <SEO
-        title="HVAC Services in Idaho Falls | Hipwell's Heating & Cooling"
+        title="HVAC Services in Idaho Falls, ID | Hipwell's Heating & Cooling"
         description="Complete HVAC repair and maintenance services for eastern Idaho: AC repair, heating repair, furnace troubleshooting, heat pump services, diagnostics, thermostat installation, and preventive maintenance."
         path="/services"
       />
       <PageHero
-        title="HVAC Services for Eastern Idaho Homes"
+        title="HVAC Services in Idaho Falls, ID"
         subtitle="Repair-focused heating and cooling services from a company that finds the root cause — not just the symptoms. Explore our full range of HVAC services below."
         image={heroImage}
         breadcrumb={{ label: 'Services' }}
@@ -81,7 +81,7 @@ export default function ServicesLanding() {
 
       <CTASection
         title="Not Sure Which Service You Need?"
-        description="Call us at 208-552-7676. We'll listen to what's going on and help you figure out the right next step."
+        description="Call us at 208-844-8165. We'll listen to what's going on and help you figure out the right next step."
       />
     </>
   );

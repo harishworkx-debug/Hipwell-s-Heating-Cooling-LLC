@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Wrench, Search, MessageSquare, Award, Building2, Heart, ChevronRight, MapPin, Clock, Check } from 'lucide-react';
+import { Phone, Wrench, Search, MessageSquare, Award, Building2, Heart, ChevronRight, MapPin, Clock, Check, ShieldCheck, Tv } from 'lucide-react';
 import SEO from '@/components/SEO';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
@@ -17,16 +17,16 @@ export default function About() {
         'We test systematically to find the actual cause of your HVAC problem — not just the symptom. When we make a repair, it addresses the real issue.',
     },
     {
-      icon: MessageSquare,
-      title: 'Clear Communication',
+      icon: ShieldCheck,
+      title: 'Licensed & Certified',
       description:
-        'We explain what we found, what needs to be done, and why. You\u2019ll understand your system and your options before any work begins.',
+        'Fully licensed, bonded, and insured in the State of Idaho to perform high-voltage electrical, gas line, and refrigeration work safely.',
     },
     {
       icon: Wrench,
       title: 'Practical Repairs',
       description:
-        'We\u2019re a repair-focused company. We don\u2019t push replacement when a repair will do the job. We give you honest information so you can decide.',
+        'We’re a repair-focused company. We don’t push replacement when a repair will do the job. We give you honest information so you can decide.',
     },
     {
       icon: Heart,
@@ -45,8 +45,8 @@ export default function About() {
       />
 
       <PageHero
-        title="About Hipwell's Heating & Cooling LLC"
-        subtitle="A repair-focused HVAC company based in Idaho Falls, Idaho — dedicated to finding the root cause of your heating and cooling problems and fixing them right."
+        title="About Hipwell's Heating & Cooling"
+        subtitle="A local, repair-focused HVAC company based in Idaho Falls, Idaho — dedicated to finding the root cause of your heating and cooling problems and fixing them right."
         image={heroImage}
         breadcrumb={{ label: 'About Us' }}
       />
@@ -64,21 +64,16 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-navy-700 leading-relaxed">
                 <p>
-                  Hipwell's Heating & Cooling LLC is based in Idaho Falls, Idaho, and serves homeowners
-                  throughout the eastern Idaho community. The company was built on a simple principle:
-                  diagnose thoroughly, communicate clearly, and fix the real problem.
+                  Hipwell's Heating & Cooling LLC is an independent, locally owned and operated HVAC contractor based in Idaho Falls, Idaho. Since our founding, we have been dedicated to providing homeowners and commercial businesses throughout the eastern Idaho community with honest, transparent, and highly technical repair services.
                 </p>
                 <p>
-                  With over 28 years of hands-on HVAC repair experience, we specialize in the repairs
-                  other companies can\u2019t or won\u2019t do. Rooms that never heat or cool right, systems
-                  that have been serviced repeatedly without improvement, problems that seem to come and
-                  go — these are the challenges we take on.
+                  Our ownership brings over <strong>28 years of hands-on HVAC experience</strong> to every job. We are fully licensed, bonded, and insured to perform residential and light commercial heating, cooling, and ventilation services.
                 </p>
                 <p>
-                  We\u2019re not a company that defaults to replacement. When a repair is the right call,
-                  we make it. When replacement makes sense, we tell you honestly and help you make an
-                  informed decision. Either way, you\u2019ll understand what\u2019s wrong with your system
-                  and what your options are.
+                  We specialize in the repairs other companies can't or won't do. Rooms that never heat or cool right, systems that have been serviced repeatedly without improvement, and complex electrical faults — these are the challenges we take on.
+                </p>
+                <p>
+                  We are a <strong>repair-first company</strong>. When a repair is the right call, we make it. When replacement makes sense, we tell you honestly and help you make an informed decision without high-pressure sales tactics.
                 </p>
               </div>
             </div>
@@ -147,7 +142,7 @@ export default function About() {
                   'Central air conditioners',
                   'Gas and electric furnaces',
                   'Heat pumps (heating and cooling)',
-                  'Thermostats and controls',
+                  'Thermostats and smart controls',
                   'Ductwork and airflow issues',
                   'Indoor air quality components',
                 ].map((item) => (
@@ -208,6 +203,40 @@ export default function About() {
                 <p className="text-sm text-navy-200 mt-1">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured In */}
+      <section className="section-padding bg-ice-50">
+        <div className="container-wide">
+          <div className="bg-white rounded-2xl border border-ice-100 shadow-sm p-8 lg:p-12">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="w-20 h-20 bg-ice-100 rounded-full flex items-center justify-center">
+                  <Tv className="w-10 h-10 text-ice-600" />
+                </div>
+              </div>
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full bg-ice-50 px-4 py-1.5 mb-3 border border-ice-100">
+                  <span className="text-xs font-bold tracking-wider text-ice-700 uppercase">Local Trust & Authority</span>
+                </div>
+                <h2 className="font-display font-bold text-2xl md:text-3xl text-navy-900 mb-4">
+                  As Featured on Local News 8 (KIFI)
+                </h2>
+                <p className="text-navy-700 leading-relaxed max-w-3xl mb-6">
+                  Hipwell's Heating & Cooling is recognized across eastern Idaho as a trusted authority on HVAC safety and consumer protection. Owner Brent Hipwell was recently featured on Local News 8 discussing how homeowners can spot fake HVAC inspections and avoid repair scams.
+                </p>
+                <a 
+                  href="https://localnews8.com/news/scam-alerts/2024/10/15/how-to-avoid-getting-scammed-on-hvac-inspections/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 text-warm-600 font-bold hover:text-warm-700 group"
+                >
+                  Read the Full Article <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

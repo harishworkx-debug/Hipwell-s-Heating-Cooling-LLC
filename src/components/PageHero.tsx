@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, ChevronRight, Home } from 'lucide-react';
+import JsonLd from '@/components/JsonLd';
+import { businessInfo } from '@/data/site-data';
 
 interface PageHeroProps {
   title: string;
@@ -9,10 +11,34 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ title, subtitle, image, breadcrumb }: PageHeroProps) {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: businessInfo.domain
+      },
+      breadcrumb.path ? {
+        '@type': 'ListItem',
+        position: 2,
+        name: breadcrumb.label,
+        item: `${businessInfo.domain}${breadcrumb.path}`
+      } : {
+        '@type': 'ListItem',
+        position: 2,
+        name: breadcrumb.label
+      }
+    ]
+  };
+
   return (
     <section className="relative pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden">
+      <JsonLd data={breadcrumbSchema} />
       <div className="absolute inset-0">
-        <img src={image} alt="" className="w-full h-full object-cover" />
+        <img src={image} alt={`${title} - Hipwell's Heating & Cooling`} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy-950/80" />
       </div>
       <div className="relative container-wide">
@@ -37,8 +63,8 @@ export default function PageHero({ title, subtitle, image, breadcrumb }: PageHer
         <p className="mt-5 text-lg text-navy-100 max-w-2xl leading-relaxed">{subtitle}</p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="tel:2085527676" className="btn-primary">
-            <Phone className="w-5 h-5" /> Call 208-552-7676
+          <a href="tel:12088448165" className="btn-primary">
+            <Phone className="w-5 h-5" /> Call 208-844-8165
           </a>
           <Link to="/contact" className="btn-outline">
             Contact Us

@@ -100,7 +100,7 @@ export default function ServiceDetail() {
                   Experiencing any of these issues?
                 </h3>
                 <p className="text-navy-200 mb-5">Call us now — we'll diagnose the real problem and fix it right.</p>
-                <a href="tel:2085527676" className="btn-primary">
+                <a href="tel:12088448165" className="btn-primary">
                   <Phone className="w-5 h-5" /> Call {businessInfo.phone}
                 </a>
               </div>
@@ -135,7 +135,7 @@ export default function ServiceDetail() {
                 <p className="text-navy-200 text-sm mb-6">
                   Talk to us about your {service.title.toLowerCase()} needs. We'll arrange a service visit at a time that works for you.
                 </p>
-                <a href="tel:2085527676" className="btn-primary w-full">
+                <a href="tel:12088448165" className="btn-primary w-full">
                   <Phone className="w-5 h-5" /> {businessInfo.phone}
                 </a>
                 <div className="mt-6 pt-6 border-t border-navy-700 space-y-3">

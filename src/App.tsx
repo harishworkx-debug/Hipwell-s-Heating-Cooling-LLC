@@ -1,8 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
-import JsonLd from '@/components/JsonLd';
 import { businessInfo } from '@/data/site-data';
 
 import Home from '@/pages/Home';
@@ -13,37 +12,52 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import FAQs from '@/pages/FAQs';
 import NotFound from '@/pages/NotFound';
+import ACRepairIdahoFalls from '@/pages/ACRepairIdahoFalls';
+import ACInstallationIdahoFalls from '@/pages/ACInstallationIdahoFalls';
+import ACMaintenanceIdahoFalls from '@/pages/ACMaintenanceIdahoFalls';
+import HeatingRepairIdahoFalls from '@/pages/HeatingRepairIdahoFalls';
+import HeatingInstallationIdahoFalls from '@/pages/HeatingInstallationIdahoFalls';
+import FurnaceTroubleshootingIdahoFalls from '@/pages/FurnaceTroubleshootingIdahoFalls';
+import HeatPumpServicesIdahoFalls from '@/pages/HeatPumpServicesIdahoFalls';
+import HVACDiagnosticsIdahoFalls from '@/pages/HVACDiagnosticsIdahoFalls';
+import ThermostatServicesIdahoFalls from '@/pages/ThermostatServicesIdahoFalls';
+import PreventiveMaintenanceIdahoFalls from '@/pages/PreventiveMaintenanceIdahoFalls';
+import RexburgACRepair from '@/pages/RexburgACRepair';
+import BlogLanding from '@/pages/BlogLanding';
+import ACBlowingWarmAir from '@/pages/ACBlowingWarmAir';
 
 function App() {
-  const businessJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'HVACBusiness',
-    name: businessInfo.name,
-    telephone: businessInfo.phone,
-    url: businessInfo.domain,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '2260 Calkins Ave',
-      addressLocality: 'Idaho Falls',
-      addressRegion: 'ID',
-      postalCode: '83402',
-      addressCountry: 'US',
-    },
-    areaServed: ['Idaho Falls', 'Rexburg', 'Ammon', 'Shelley', 'Blackfoot', 'Rigby', 'Ucon'],
-    openingHours: 'Mo-Fr 08:00-17:00',
-  };
-
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <JsonLd data={businessJsonLd} />
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesLanding />} />
-          <Route path="/:slug" element={<DynamicRouteWrapper />} />
+          <Route path="/air-conditioning-repair-idaho-falls" element={<ACRepairIdahoFalls />} />
+          <Route path="/air-conditioning-installation-idaho-falls" element={<ACInstallationIdahoFalls />} />
+          <Route path="/ac-maintenance-idaho-falls" element={<ACMaintenanceIdahoFalls />} />
+          <Route path="/heating-repair-idaho-falls" element={<HeatingRepairIdahoFalls />} />
+          <Route path="/heating-installation-idaho-falls" element={<HeatingInstallationIdahoFalls />} />
+          <Route path="/furnace-troubleshooting-idaho-falls" element={<FurnaceTroubleshootingIdahoFalls />} />
+          <Route path="/heat-pump-services-idaho-falls" element={<HeatPumpServicesIdahoFalls />} />
+          <Route path="/hvac-diagnostics-idaho-falls" element={<HVACDiagnosticsIdahoFalls />} />
+          <Route path="/thermostat-services-idaho-falls" element={<ThermostatServicesIdahoFalls />} />
+          <Route path="/preventive-maintenance-idaho-falls" element={<PreventiveMaintenanceIdahoFalls />} />
+          
+          {/* Location Hub & Pages */}
           <Route path="/service-areas" element={<ServiceAreasLanding />} />
+          <Route path="/ac-repair-rexburg" element={<RexburgACRepair />} />
+
+          {/* Blog & Resources */}
+          <Route path="/blog" element={<BlogLanding />} />
+          <Route path="/blog/ac-blowing-warm-air-idaho-falls" element={<ACBlowingWarmAir />} />
+
+          {/* SEO Canonical Redirects */}
+          <Route path="/ac-repair-idaho-falls" element={<Navigate to="/air-conditioning-repair-idaho-falls" replace />} />
+          
+          <Route path="/:slug" element={<DynamicRouteWrapper />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faqs" element={<FAQs />} />

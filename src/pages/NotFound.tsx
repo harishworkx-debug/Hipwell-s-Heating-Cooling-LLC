@@ -8,7 +8,7 @@ export default function NotFound() {
     <>
       <SEO
         title="Page Not Found | Hipwell's Heating & Cooling"
-        description="The page you're looking for doesn't exist. Please visit our homepage or call us at 208-552-7676."
+        description="The page you're looking for doesn't exist. Please visit our homepage or call us at 208-844-8165."
         path="/404"
       />
       <section className="min-h-screen flex items-center justify-center bg-navy-50 pt-20">

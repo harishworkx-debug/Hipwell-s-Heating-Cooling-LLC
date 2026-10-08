@@ -1,7 +1,7 @@
 export const businessInfo = {
   name: "Hipwell's Heating & Cooling LLC",
-  phone: '208-552-7676',
-  phoneLink: 'tel:2085527676',
+  phone: '208-844-8165',
+  phoneLink: 'tel:12088448165',
   domain: 'https://www.hipwellshvac.com',
   address: '2260 Calkins Ave, Idaho Falls, ID 83402',
   city: 'Idaho Falls',
@@ -35,7 +35,7 @@ export const services = [
       'The system runs continuously but never reaches the thermostat setpoint',
     ],
     process: [
-      'Call 208-552-7676 to describe the symptoms you\u2019re experiencing',
+      'Call 208-844-8165 to describe the symptoms you\u2019re experiencing',
       'We discuss what you\u2019ve noticed, when it started, and any recent changes',
       'We schedule a service visit at a time that works for you',
       'On-site, we perform a full system inspection: electrical, refrigerant, airflow, and controls',
@@ -74,7 +74,7 @@ export const services = [
       'Repair estimates approach or exceed half the cost of a new unit',
     ],
     process: [
-      'Call 208-552-7676 to discuss your current system and concerns',
+      'Call 208-844-8165 to discuss your current system and concerns',
       'We evaluate your existing equipment, ductwork, and home cooling needs',
       'We provide an honest comparison: repair cost vs. replacement value',
       'If replacement makes sense, we help you select a properly sized system',
@@ -84,7 +84,7 @@ export const services = [
     faqs: [
       {
         q: 'Do you offer free replacement estimates?',
-        a: 'We provide honest assessments of your current system and whether replacement makes sense. Call us at 208-552-7676 to discuss your situation and we\u2019ll let you know the best next step.',
+        a: 'We provide honest assessments of your current system and whether replacement makes sense. Call us at 208-844-8165 to discuss your situation and we\u2019ll let you know the best next step.',
       },
       {
         q: 'What size AC do I need for my home?',
@@ -113,7 +113,7 @@ export const services = [
       'The outdoor unit is surrounded by debris, dirt, or overgrown vegetation',
     ],
     process: [
-      'Call 208-552-7676 to schedule a maintenance visit',
+      'Call 208-844-8165 to schedule a maintenance visit',
       'We clean the condenser coils, check refrigerant levels, and inspect electrical connections',
       'We verify airflow, thermostat operation, and overall system performance',
       'We identify any components showing wear or potential failure',
@@ -152,7 +152,7 @@ export const services = [
       'Unusual banging, rattling, or rumbling sounds during operation',
     ],
     process: [
-      'Call 208-552-7676 to describe what your heating system is doing',
+      'Call 208-844-8165 to describe what your heating system is doing',
       'We discuss safety concerns first — gas, odor, or electrical smells take priority',
       'We schedule a service visit, often same-day during winter months',
       'We perform a complete diagnostic: heat exchanger, burners, controls, and airflow',
@@ -191,7 +191,7 @@ export const services = [
       'Your home has hot and cold spots that adjustments haven\u2019t resolved',
     ],
     process: [
-      'Call 208-552-7676 to discuss your current heating system',
+      'Call 208-844-8165 to discuss your current heating system',
       'We inspect the existing equipment, ductwork, and home heating needs',
       'We provide an honest repair-or-replace comparison',
       'If replacement is right, we help you choose a properly sized system',
@@ -231,7 +231,7 @@ export const services = [
       'Some rooms are warm while others stay cold',
     ],
     process: [
-      'Call 208-552-7676 and describe the symptoms in as much detail as you can',
+      'Call 208-844-8165 and describe the symptoms in as much detail as you can',
       'We ask targeted questions to narrow down the likely cause before we arrive',
       'On-site, we test each subsystem: ignition, flame sensor, gas valve, pressure switches',
       'We inspect the heat exchanger for cracks or wear — a critical safety check',
@@ -271,7 +271,7 @@ export const services = [
       'Short cycling or continuous running without adequate temperature change',
     ],
     process: [
-      'Call 208-552-7676 and describe what\u2019s happening in both heating and cooling modes',
+      'Call 208-844-8165 and describe what\u2019s happening in both heating and cooling modes',
       'We ask about any recent service, thermostat changes, or weather patterns',
       'On-site, we test the reversing valve, refrigerant charge, defrost cycle, and controls',
       'We inspect both indoor and outdoor components',
@@ -289,7 +289,7 @@ export const services = [
       },
       {
         q: 'Can you repair heat pumps from all manufacturers?',
-        a: 'We work on most residential heat pump brands. If you\u2019re not sure about yours, call us at 208-552-7676 with the make and model and we\u2019ll let you know.',
+        a: 'We work on most residential heat pump brands. If you\u2019re not sure about yours, call us at 208-844-8165 with the make and model and we\u2019ll let you know.',
       },
     ],
   },
@@ -310,7 +310,7 @@ export const services = [
       'You want a second opinion after another company\u2019s diagnosis',
     ],
     process: [
-      'Call 208-552-7676 and describe the issue and its history',
+      'Call 208-844-8165 and describe the issue and its history',
       'We ask about previous repairs, system age, and any patterns you\u2019ve noticed',
       'On-site, we perform a full-system diagnostic across all subsystems',
       'We document our findings and explain each issue in plain language',
@@ -328,7 +328,7 @@ export const services = [
       },
       {
         q: 'Do you charge for a diagnostic even if I decide not to repair?',
-        a: 'The diagnostic visit covers the time and expertise to evaluate your system and identify the problem. Call us at 208-552-7676 and we\u2019ll explain how it works before scheduling.',
+        a: 'The diagnostic visit covers the time and expertise to evaluate your system and identify the problem. Call us at 208-844-8165 and we\u2019ll explain how it works before scheduling.',
       },
     ],
   },
@@ -350,7 +350,7 @@ export const services = [
       'You want to upgrade to a programmable or smart thermostat',
     ],
     process: [
-      'Call 208-552-7676 and describe what the thermostat is doing',
+      'Call 208-844-8165 and describe what the thermostat is doing',
       'We ask about your HVAC system type and thermostat model',
       'On-site, we test the thermostat, wiring, and communication with the HVAC equipment',
       'If the thermostat is the problem, we explain repair or replacement options',
@@ -389,7 +389,7 @@ export const services = [
       'You want to extend the life of your current equipment',
     ],
     process: [
-      'Call 208-552-7676 to schedule a maintenance visit',
+      'Call 208-844-8165 to schedule a maintenance visit',
       'We perform a full inspection of your heating and cooling equipment',
       'We clean coils, check refrigerant levels, inspect electrical components, and test controls',
       'We verify airflow, thermostat operation, and overall performance',
@@ -468,7 +468,7 @@ export const serviceAreas = [
 export const homeFaqs = [
   {
     q: 'What areas does Hipwell\u2019s Heating & Cooling serve?',
-    a: 'We\u2019re based in Idaho Falls and serve the surrounding eastern Idaho community, including Rexburg, Ammon, Shelley, Blackfoot, Rigby, and Ucon. If you\u2019re not sure whether we cover your area, call us at 208-552-7676.',
+    a: 'We\u2019re based in Idaho Falls and serve the surrounding eastern Idaho community, including Rexburg, Ammon, Shelley, Blackfoot, Rigby, and Ucon. If you\u2019re not sure whether we cover your area, call us at 208-844-8165.',
   },
   {
     q: 'Does Hipwell\u2019s specialize in repairs or installations?',
@@ -476,7 +476,7 @@ export const homeFaqs = [
   },
   {
     q: 'How quickly can you come out for a repair?',
-    a: 'We do our best to schedule service visits promptly, especially during extreme weather. Call us at 208-552-7676 and we\u2019ll let you know our current availability.',
+    a: 'We do our best to schedule service visits promptly, especially during extreme weather. Call us at 208-844-8165 and we\u2019ll let you know our current availability.',
   },
   {
     q: 'What types of HVAC systems do you work on?',
@@ -484,7 +484,7 @@ export const homeFaqs = [
   },
   {
     q: 'Do you offer free estimates?',
-    a: 'We provide honest assessments of your system and what it needs. For specific repair or replacement work, call us at 208-552-7676 to discuss your situation and we\u2019ll explain how we handle pricing.',
+    a: 'We provide honest assessments of your system and what it needs. For specific repair or replacement work, call us at 208-844-8165 to discuss your situation and we\u2019ll explain how we handle pricing.',
   },
   {
     q: 'Can you fix a system that another company couldn\u2019t?',
@@ -529,7 +529,7 @@ export const processSteps = [
   {
     step: 1,
     title: 'Call Us',
-    description: 'Pick up the phone and call 208-552-7676. Tell us what you\u2019re experiencing with your heating or cooling system.',
+    description: 'Pick up the phone and call 208-844-8165. Tell us what you\u2019re experiencing with your heating or cooling system.',
     icon: 'Phone',
   },
   {

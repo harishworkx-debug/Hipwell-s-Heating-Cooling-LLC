@@ -66,11 +66,40 @@ const comfortImage =
   'https://images.pexels.com/photos/7534560/pexels-photo-7534560.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop';
 
 export default function Home() {
+  const businessJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HVACBusiness',
+    name: businessInfo.name,
+    telephone: businessInfo.phone,
+    url: businessInfo.domain,
+    logo: `${businessInfo.domain}/logo.png`,
+    image: 'https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '2260 Calkins Ave',
+      addressLocality: 'Idaho Falls',
+      addressRegion: 'ID',
+      postalCode: '83402',
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 43.492661,
+      longitude: -112.040756
+    },
+    areaServed: serviceAreas.map(area => area.name),
+    openingHours: 'Mo-Fr 08:00-17:00',
+    sameAs: [
+      'https://www.yellowpages.com/rexburg-id/furnaces-parts-supplies'
+    ]
+  };
+
   return (
     <>
+      <JsonLd data={businessJsonLd} />
       <SEO
-        title="Hipwell's Heating & Cooling LLC | HVAC Repair in Idaho Falls, ID"
-        description="Repair-focused HVAC company serving Idaho Falls and eastern Idaho. Over 28 years of experience diagnosing and fixing heating and cooling problems. Call 208-552-7676."
+        title="HVAC Repair in Idaho Falls, ID | Hipwell's Heating & Cooling"
+        description="Need a reliable HVAC contractor in Idaho Falls? We specialize in fast AC repair, furnace repair, and full heating and cooling services. Call 208-844-8165."
         path="/"
       />
 
@@ -87,15 +116,15 @@ export default function Home() {
               <span className="text-sm font-medium text-warm-200">Serving Eastern Idaho</span>
             </div>
             <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-balance">
-              Heating & Cooling Solutions for Year-Round Comfort
+              Reliable HVAC Repair in Idaho Falls, ID
             </h1>
             <p className="mt-6 text-lg md:text-xl text-navy-100 leading-relaxed max-w-xl">
-              Repair-focused HVAC services for Idaho Falls and the surrounding community. Over 28 years
-              of experience fixing the heating and cooling problems other companies can't.
+              Your trusted local HVAC contractor for heating and cooling in Idaho Falls. Over 28 years
+              of experience in fast, effective AC repair, furnace repair, and comprehensive HVAC service.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="tel:2085527676" className="btn-primary text-lg px-8 py-4">
-                <Phone className="w-5 h-5" /> Call 208-552-7676
+              <a href="tel:12088448165" className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-red-700 hover:-translate-y-0.5 animate-pulse">
+                <Phone className="w-5 h-5" /> Call 208-844-8165
               </a>
               <Link to="/services" className="btn-outline text-lg px-8 py-4">
                 Explore HVAC Services <ChevronRight className="w-5 h-5" />
@@ -148,8 +177,8 @@ export default function Home() {
                 <Link to="/about" className="btn-secondary">
                   Meet Hipwell's Heating & Cooling <ChevronRight className="w-4 h-4" />
                 </Link>
-                <a href="tel:2085527676" className="inline-flex items-center justify-center gap-2 text-navy-900 font-semibold hover:text-warm-600 transition-colors">
-                  <Phone className="w-5 h-5" /> 208-552-7676
+                <a href="tel:12088448165" className="inline-flex items-center justify-center gap-2 text-navy-900 font-semibold hover:text-warm-600 transition-colors">
+                  <Phone className="w-5 h-5" /> 208-844-8165
                 </a>
               </div>
             </div>
@@ -340,6 +369,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 5a. Heat Pump & Thermostat Services */}
+      <section className="section-padding bg-white">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Heat Pump */}
+            <div className="rounded-2xl bg-navy-50 p-8 md:p-10 border border-navy-100">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-warm-500 mb-6">
+                <RefreshCw className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-display font-bold text-2xl text-navy-900 mb-4">
+                Heat Pump Repair & Installation
+              </h3>
+              <p className="text-navy-600 leading-relaxed mb-6">
+                Heat pumps are an excellent, energy-efficient choice for heating and cooling in Idaho Falls. 
+                Whether your heat pump is freezing up, short-cycling, or failing to heat/cool properly, our 
+                technicians provide specialized heat pump repair and maintenance.
+              </p>
+              <Link to="/heat-pump-services-idaho-falls" className="inline-flex items-center gap-2 font-semibold text-warm-600 hover:text-warm-700">
+                Heat Pump Services <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+            
+            {/* Thermostat */}
+            <div className="rounded-2xl bg-navy-50 p-8 md:p-10 border border-navy-100">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-ice-600 mb-6">
+                <ThermometerSun className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-display font-bold text-2xl text-navy-900 mb-4">
+                Thermostat Services
+              </h3>
+              <p className="text-navy-600 leading-relaxed mb-6">
+                A malfunctioning thermostat can cause your whole HVAC system to run poorly. We install, 
+                diagnose, and repair traditional and smart thermostats, ensuring your heating and cooling 
+                systems communicate perfectly.
+              </p>
+              <Link to="/thermostat-services-idaho-falls" className="inline-flex items-center gap-2 font-semibold text-ice-600 hover:text-ice-700">
+                Thermostat Services <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5b. HVAC Diagnostics */}
+      <section className="section-padding bg-navy-900 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 opacity-80" />
+        <div className="relative container-wide max-w-4xl mx-auto">
+          <Search className="w-12 h-12 text-warm-500 mx-auto mb-6" />
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-white mb-6">
+            Expert HVAC Diagnostics
+          </h2>
+          <p className="text-lg text-navy-200 leading-relaxed mb-8">
+            Before we recommend a repair, we find the root cause. Our comprehensive HVAC diagnostics service 
+            in Idaho Falls ensures that we don't just treat symptoms, but permanently resolve your heating 
+            and cooling issues. We save you time and money by fixing it right the first time.
+          </p>
+          <Link to="/hvac-diagnostics-idaho-falls" className="btn-primary">
+            Learn About Our Diagnostic Process
+          </Link>
+        </div>
+      </section>
+
       {/* 6. Why Choose Hipwell's */}
       <section className="section-padding bg-white">
         <div className="container-wide">
@@ -415,8 +506,8 @@ export default function Home() {
               <p className="text-sm text-navy-200 mb-6 text-center">
                 We've seen it all. Call us and we'll help.
               </p>
-              <a href="tel:2085527676" className="btn-primary">
-                <Phone className="w-5 h-5" /> Call 208-552-7676
+              <a href="tel:12088448165" className="btn-primary">
+                <Phone className="w-5 h-5" /> Call 208-844-8165
               </a>
             </div>
           </div>
@@ -532,8 +623,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. FAQs */}
+      {/* Recent Projects */}
       <section className="section-padding bg-white">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 rounded-full bg-warm-50 px-4 py-1.5 mb-4">
+              <Wrench className="w-4 h-4 text-warm-600" />
+              <span className="text-sm font-semibold text-warm-700">Our Work</span>
+            </div>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-navy-900 text-balance">
+              Recent HVAC Projects in Idaho Falls
+            </h2>
+            <p className="mt-4 text-lg text-navy-600">
+              Take a look at some of the heating and cooling repair solutions we've recently completed for local residents.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="rounded-2xl overflow-hidden shadow-md border border-navy-100">
+              <img src="https://images.pexels.com/photos/7347538/pexels-photo-7347538.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="AC Repair Project in Idaho Falls" className="w-full h-48 object-cover" />
+              <div className="p-6 bg-white">
+                <h3 className="font-bold text-navy-900 mb-2">Emergency AC Repair</h3>
+                <p className="text-sm text-navy-600 mb-4">Diagnosed and replaced a failing capacitor in a residential AC unit during a heatwave, restoring cooling immediately.</p>
+                <div className="text-xs font-semibold text-warm-600">Ammon, ID</div>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md border border-navy-100">
+              <img src="https://images.pexels.com/photos/20046689/pexels-photo-20046689.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Furnace Repair Project" className="w-full h-48 object-cover" />
+              <div className="p-6 bg-white">
+                <h3 className="font-bold text-navy-900 mb-2">Furnace Troubleshooting</h3>
+                <p className="text-sm text-navy-600 mb-4">Resolved a persistent short-cycling issue by diagnosing a faulty flame sensor and restoring reliable heating.</p>
+                <div className="text-xs font-semibold text-warm-600">Idaho Falls, ID</div>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md border border-navy-100">
+              <img src="https://images.pexels.com/photos/7534560/pexels-photo-7534560.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Thermostat Installation" className="w-full h-48 object-cover" />
+              <div className="p-6 bg-white">
+                <h3 className="font-bold text-navy-900 mb-2">Smart Thermostat Upgrade</h3>
+                <p className="text-sm text-navy-600 mb-4">Upgraded an outdated manual thermostat to a smart Wi-Fi model for better energy efficiency and climate control.</p>
+                <div className="text-xs font-semibold text-warm-600">Rigby, ID</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. FAQs */}
+      <section className="section-padding bg-navy-50">
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-1.5 mb-4">
@@ -581,7 +716,7 @@ export default function Home() {
               </h2>
               <div className="space-y-6">
                 <a
-                  href="tel:2085527676"
+                  href="tel:12088448165"
                   className="flex items-center gap-4 p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow border border-navy-100 group"
                 >
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-warm-500 group-hover:scale-110 transition-transform">
@@ -589,7 +724,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-navy-500 font-medium">Call Us</p>
-                    <p className="text-lg font-semibold text-navy-900">208-552-7676</p>
+                    <p className="text-lg font-semibold text-navy-900">208-844-8165</p>
                   </div>
                 </a>
                 <div className="flex items-start gap-4 p-5 rounded-xl bg-white shadow-md border border-navy-100">
