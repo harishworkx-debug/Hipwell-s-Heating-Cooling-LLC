@@ -1,4 +1,4 @@
-import { Phone, Check, Snowflake, Wrench, AlertTriangle, Fan, RefreshCw, Activity, DollarSign, Clock } from 'lucide-react';
+import { Phone, Check, Snowflake, Wrench, AlertTriangle, Fan, RefreshCw, Activity, DollarSign, Clock, Flame, Settings } from 'lucide-react';
 import SEO from '@/components/SEO';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
