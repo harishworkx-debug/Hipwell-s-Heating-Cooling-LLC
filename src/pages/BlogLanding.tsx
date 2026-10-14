@@ -1,7 +1,9 @@
 import { BookOpen, Calendar, ArrowRight } from 'lucide-react';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
+import { businessInfo } from '@/data/site-data';
 import { Link } from 'react-router-dom';
 
 export default function BlogLanding() {
@@ -17,19 +19,45 @@ export default function BlogLanding() {
     },
     {
       slug: 'furnace-short-cycling',
-      title: 'Why Is My Furnace Short Cycling?',
-      excerpt: 'If your furnace turns on for two minutes and shuts off, you have a short-cycling problem. Learn what causes it and how to fix it.',
-      date: 'October 15, 2025',
-      category: 'Furnace Repair'
+      title: 'Why Does My Furnace Keep Turning Off? (Furnace Short Cycling)',
+      excerpt: 'If your furnace turns on for two minutes and shuts off, you have a short-cycling problem. Learn what causes it, safe filter checks, and when to call a pro.',
+      date: 'October 14, 2026',
+      category: 'Heating & Furnace'
     },
     {
       slug: 'ac-repair-vs-replacement',
-      title: 'AC Repair vs AC Replacement: Which Is Better?',
-      excerpt: 'Use the 5,000 rule and other professional metrics to decide whether it makes financial sense to repair your old AC or install a new one.',
-      date: 'April 02, 2026',
+      title: 'AC Repair vs. Replacement: When Should You Replace?',
+      excerpt: 'Use the professional $5,000 rule, evaluate R-22 refrigerant phaseout costs, and decide whether it makes financial sense to repair or replace your cooling system.',
+      date: 'June 02, 2026',
       category: 'HVAC Advice'
+    },
+    {
+      slug: 'seasonal-hvac-maintenance-checklist',
+      title: 'What Does Seasonal HVAC Maintenance Include? (Checklist)',
+      excerpt: 'A complete step-by-step checklist of spring AC tune-up and fall heating inspection tasks that prevent emergency breakdowns and lower energy bills.',
+      date: 'August 20, 2026',
+      category: 'Maintenance'
     }
   ];
+
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: businessInfo.domain,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${businessInfo.domain}/blog`,
+      },
+    ],
+  };
 
   return (
     <>
@@ -38,6 +66,7 @@ export default function BlogLanding() {
         description="Read our latest HVAC advice, troubleshooting guides, and tips for keeping your eastern Idaho home comfortable year-round."
         path="/blog"
       />
+      <JsonLd data={schemaData} />
 
       <PageHero
         title="HVAC Resources & Blog"

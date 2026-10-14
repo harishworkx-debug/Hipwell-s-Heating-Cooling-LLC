@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, Wrench, Search, MessageSquare, Award, Building2, Heart, ChevronRight, MapPin, Clock, Check, ShieldCheck, Tv } from 'lucide-react';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
 import { businessInfo, serviceAreas } from '@/data/site-data';
@@ -8,6 +9,25 @@ import { businessInfo, serviceAreas } from '@/data/site-data';
 export default function About() {
   const heroImage =
     'https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop';
+
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: businessInfo.domain,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About Us',
+        item: `${businessInfo.domain}/about`,
+      },
+    ],
+  };
 
   const values = [
     {
@@ -43,6 +63,7 @@ export default function About() {
         description="Learn about Hipwell's Heating & Cooling LLC — a repair-focused HVAC company in Idaho Falls, Idaho with over 28 years of experience diagnosing and fixing heating and cooling problems."
         path="/about"
       />
+      <JsonLd data={schemaData} />
 
       <PageHero
         title="About Hipwell's Heating & Cooling"

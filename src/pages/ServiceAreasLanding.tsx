@@ -1,11 +1,31 @@
-import { MapPin, Navigation, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
+import { businessInfo } from '@/data/site-data';
 import { Link } from 'react-router-dom';
 
 export default function ServiceAreasLanding() {
   const heroImage = 'https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920';
+
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: businessInfo.domain,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Service Areas',
+        item: `${businessInfo.domain}/service-areas`,
+      },
+    ],
+  };
 
   const areas = [
     { name: 'Idaho Falls', slug: '/', desc: 'Our home base. Complete HVAC repair and installation across Idaho Falls.' },
@@ -24,6 +44,7 @@ export default function ServiceAreasLanding() {
         description="Hipwell's Heating & Cooling provides professional HVAC repair, installation, and maintenance across Idaho Falls, Rexburg, Ammon, Rigby, Shelley, and Blackfoot."
         path="/service-areas"
       />
+      <JsonLd data={schemaData} />
 
       <PageHero
         title="HVAC Service Areas in Southeast Idaho"

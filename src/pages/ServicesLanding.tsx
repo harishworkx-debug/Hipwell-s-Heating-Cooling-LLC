@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Phone, ChevronRight, Snowflake, Flame, Fan, Wrench, RefreshCw, Search, Thermometer, ShieldCheck, Settings, Home as HomeIcon } from 'lucide-react';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
-import { services } from '@/data/site-data';
+import { services, businessInfo } from '@/data/site-data';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Snowflake, Flame, Fan, Wrench, RefreshCw, Search, Thermometer, ShieldCheck, Settings, Home: HomeIcon,
@@ -13,6 +14,25 @@ export default function ServicesLanding() {
   const heroImage =
     'https://images.pexels.com/photos/6471913/pexels-photo-6471913.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop';
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: businessInfo.domain,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: `${businessInfo.domain}/services`,
+      },
+    ],
+  };
+
   return (
     <>
       <SEO
@@ -20,6 +40,7 @@ export default function ServicesLanding() {
         description="Complete HVAC repair and maintenance services for eastern Idaho: AC repair, heating repair, furnace troubleshooting, heat pump services, diagnostics, thermostat installation, and preventive maintenance."
         path="/services"
       />
+      <JsonLd data={schemaData} />
       <PageHero
         title="HVAC Services in Idaho Falls, ID"
         subtitle="Repair-focused heating and cooling services from a company that finds the root cause — not just the symptoms. Explore our full range of HVAC services below."

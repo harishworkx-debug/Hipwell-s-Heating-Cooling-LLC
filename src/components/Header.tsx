@@ -131,6 +131,9 @@ export default function Header() {
               )}
             </div>
 
+            <NavLink to="/blog" className={navLinkClass}>
+              Blog
+            </NavLink>
             <NavLink to="/about" className={navLinkClass}>
               About Us
             </NavLink>
@@ -222,6 +225,9 @@ export default function Header() {
               )}
             </div>
 
+            <NavLink to="/blog" className={mobileNavLinkClass}>
+              Blog
+            </NavLink>
             <NavLink to="/about" className={mobileNavLinkClass}>
               About Us
             </NavLink>

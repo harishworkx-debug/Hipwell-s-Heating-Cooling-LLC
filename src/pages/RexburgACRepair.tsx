@@ -1,5 +1,6 @@
 import { Phone, MapPin, Star, ThermometerSun, ShieldCheck, PenTool, CheckCircle, Navigation } from 'lucide-react';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
 import { businessInfo } from '@/data/site-data';
@@ -8,13 +9,67 @@ import { Link } from 'react-router-dom';
 export default function RexburgACRepair() {
   const heroImage = 'https://images.pexels.com/photos/534228/pexels-photo-534228.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920';
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: 'Air Conditioning Repair in Rexburg, ID',
+        serviceType: 'AC Repair',
+        provider: {
+          '@type': 'HVACBusiness',
+          name: businessInfo.name,
+          telephone: '+1-208-844-8165',
+          url: businessInfo.domain,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '2260 Calkins Ave',
+            addressLocality: 'Idaho Falls',
+            addressRegion: 'ID',
+            postalCode: '83402',
+            addressCountry: 'US',
+          },
+        },
+        areaServed: {
+          '@type': 'City',
+          name: 'Rexburg, Idaho',
+        },
+        description: 'Fast, professional air conditioning repair and diagnostics for Rexburg and Madison County homes. Solving frozen coils, blown capacitors, and warm air issues.',
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: businessInfo.domain,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Service Areas',
+            item: `${businessInfo.domain}/service-areas`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Rexburg AC Repair',
+            item: `${businessInfo.domain}/ac-repair-rexburg`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
       <SEO
         title="AC Repair in Rexburg, ID | Hipwell's Heating & Cooling"
-        description="Fast, reliable AC repair in Rexburg, Idaho. We service Madison County homes and businesses with honest diagnostics and upfront pricing."
+        description="Fast, reliable AC repair in Rexburg, Idaho. We service Madison County homes and businesses with honest diagnostics and upfront pricing. Call 208-844-8165."
         path="/ac-repair-rexburg"
       />
+      <JsonLd data={schemaData} />
 
       <PageHero
         title="AC Repair in Rexburg, ID"

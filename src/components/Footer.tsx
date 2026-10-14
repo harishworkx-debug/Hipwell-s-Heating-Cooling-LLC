@@ -115,12 +115,15 @@ export default function Footer() {
                 {businessInfo.hours}
               </li>
             </ul>
-            <div className="mt-4 flex gap-4">
+            <div className="mt-4 flex flex-wrap gap-4">
               <Link to="/contact" className="text-sm font-semibold text-warm-400 hover:text-warm-300 transition-colors">
                 Contact Form
               </Link>
               <Link to="/about" className="text-sm font-semibold text-warm-400 hover:text-warm-300 transition-colors">
                 About Us
+              </Link>
+              <Link to="/blog" className="text-sm font-semibold text-warm-400 hover:text-warm-300 transition-colors">
+                HVAC Blog
               </Link>
             </div>
           </div>
@@ -132,6 +135,9 @@ export default function Footer() {
             © {new Date().getFullYear()} {businessInfo.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
+            <Link to="/blog" className="text-sm text-navy-300 hover:text-warm-400 transition-colors">
+              Blog
+            </Link>
             <Link to="/faqs" className="text-sm text-navy-300 hover:text-warm-400 transition-colors">
               FAQs
             </Link>

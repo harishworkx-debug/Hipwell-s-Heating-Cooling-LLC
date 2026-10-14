@@ -40,22 +40,43 @@ export default function FAQs() {
     },
   ];
 
-  const faqSchema = {
+  const schemaData = {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a
-      }
-    }))
+    '@graph': [
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a
+          }
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: businessInfo.domain,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'FAQs',
+            item: `${businessInfo.domain}/faqs`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
     <>
-      <JsonLd data={faqSchema} />
+      <JsonLd data={schemaData} />
       <SEO
         title="HVAC FAQs | Hipwell's Heating & Cooling Idaho Falls"
         description="Answers to common HVAC questions in Idaho Falls. Learn about AC repair costs, why your furnace is blowing cold air, and when to replace your system."

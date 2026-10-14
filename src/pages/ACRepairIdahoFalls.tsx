@@ -1,5 +1,6 @@
 import { Phone, Check, Snowflake, Wrench, AlertTriangle, Fan, RefreshCw, Activity, DollarSign, Clock, Flame, Settings } from 'lucide-react';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
 import { businessInfo } from '@/data/site-data';
@@ -7,6 +8,59 @@ import { Link } from 'react-router-dom';
 
 export default function ACRepairIdahoFalls() {
   const heroImage = 'https://images.pexels.com/photos/6471912/pexels-photo-6471912.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920';
+
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: 'Air Conditioning Repair in Idaho Falls, ID',
+        serviceType: 'AC Repair',
+        provider: {
+          '@type': 'HVACBusiness',
+          name: businessInfo.name,
+          telephone: '+1-208-844-8165',
+          url: businessInfo.domain,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '2260 Calkins Ave',
+            addressLocality: 'Idaho Falls',
+            addressRegion: 'ID',
+            postalCode: '83402',
+            addressCountry: 'US',
+          },
+        },
+        areaServed: {
+          '@type': 'City',
+          name: 'Idaho Falls, Idaho',
+        },
+        description: 'Professional air conditioning diagnostics and repair in Idaho Falls. Fixing frozen coils, low refrigerant, capacitor burnouts, and compressor issues.',
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: businessInfo.domain,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Services',
+            item: `${businessInfo.domain}/services`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'AC Repair Idaho Falls',
+            item: `${businessInfo.domain}/air-conditioning-repair-idaho-falls`,
+          },
+        ],
+      },
+    ],
+  };
 
   const commonIssues = [
     { title: 'AC Not Cooling', icon: Snowflake, text: "The most common complaint we hear is an AC that runs but doesn't cool. This can be caused by a dirty air filter, a refrigerant leak, or a failing compressor. We don't just add Freon and leave; we find the root cause." },
@@ -28,6 +82,7 @@ export default function ACRepairIdahoFalls() {
         description="Professional AC repair in Idaho Falls. We fix ACs not cooling, frozen coils, refrigerant leaks, and compressor problems. Call Hipwell's Heating & Cooling."
         path="/air-conditioning-repair-idaho-falls"
       />
+      <JsonLd data={schemaData} />
 
       <PageHero
         title="AC Repair in Idaho Falls, ID"

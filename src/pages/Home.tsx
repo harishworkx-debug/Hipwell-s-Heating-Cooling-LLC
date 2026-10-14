@@ -70,10 +70,12 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'HVACBusiness',
     name: businessInfo.name,
-    telephone: businessInfo.phone,
+    telephone: '+1-208-844-8165',
     url: businessInfo.domain,
     logo: `${businessInfo.domain}/logo.png`,
-    image: 'https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop',
+    image: 'https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop',
+    priceRange: '$$',
+    description: businessInfo.description,
     address: {
       '@type': 'PostalAddress',
       streetAddress: '2260 Calkins Ave',
@@ -85,13 +87,24 @@ export default function Home() {
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 43.492661,
-      longitude: -112.040756
+      longitude: -112.040756,
     },
-    areaServed: serviceAreas.map(area => area.name),
+    areaServed: serviceAreas.map((area) => ({
+      '@type': 'AdministrativeArea',
+      name: `${area.name}, ID`,
+    })),
     openingHours: 'Mo-Fr 08:00-17:00',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      bestRating: '5',
+      worstRating: '1',
+      reviewCount: reviews.length.toString(),
+    },
     sameAs: [
-      'https://www.yellowpages.com/rexburg-id/furnaces-parts-supplies'
-    ]
+      businessInfo.mapsLink,
+      'https://www.yellowpages.com/rexburg-id/furnaces-parts-supplies',
+    ],
   };
 
   return (
